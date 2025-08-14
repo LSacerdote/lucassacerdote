@@ -1,4 +1,3 @@
-// src/components/DarkVeil.tsx
 "use client";
 
 import { useRef, useEffect } from "react";
@@ -86,7 +85,7 @@ type Props = {
   scanlineFrequency?: number;
   warpAmount?: number;
   resolutionScale?: number;
-  className?: string; // Adicionado para aceitar classes
+  className?: string;
 };
 
 export default function DarkVeil({
@@ -97,7 +96,7 @@ export default function DarkVeil({
   scanlineFrequency = 0,
   warpAmount = 0,
   resolutionScale = 1,
-  className = "", // Adicionado para aceitar classes
+  className = "",
 }: Props) {
   const ref = useRef<HTMLCanvasElement>(null);
   useEffect(() => {
@@ -170,10 +169,5 @@ export default function DarkVeil({
     warpAmount,
     resolutionScale,
   ]);
-  return (
-    <canvas
-      ref={ref}
-      className={`w-full h-full block ${className}`} // Adicionado para aceitar classes
-    />
-  );
+  return <canvas ref={ref} className={`w-full h-full block ${className}`} />;
 }
