@@ -1,8 +1,8 @@
 "use client";
 
-import { useState } from "react";
+import React, { useState } from "react";
 
-export function ContactForm() {
+export const ContactForm = () => {
   const [name, setName] = useState("");
   const [email, setEmail] = useState("");
   const [message, setMessage] = useState("");
@@ -28,17 +28,18 @@ export function ContactForm() {
         setName("");
         setEmail("");
         setMessage("");
+        setTimeout(() => setStatus(""), 5000);
       } else {
-        setStatus(`Erro: ${data.error}`);
+        setStatus(`Erro: ${data.error || "Tente novamente mais tarde."}`);
       }
     } catch (error) {
-      setStatus("Erro ao enviar. Tente novamente mais tarde.");
+      setStatus("Erro ao enviar. Verifique sua conexão.");
     }
   };
 
   return (
-    <section id="contato" className="w-full max-w-2xl mx-auto py-24 px-4">
-      <h2 className="text-3xl font-bold text-center mb-8">Entre em Contato</h2>
+    <div className="w-full">
+      <h3 className="text-3xl font-bold text-white mb-6">Fale Comigo</h3>
       <form onSubmit={handleSubmit} className="flex flex-col gap-4">
         <input
           type="text"
@@ -46,7 +47,7 @@ export function ContactForm() {
           value={name}
           onChange={(e) => setName(e.target.value)}
           required
-          className="p-3 bg-gray-700 rounded-md text-white"
+          className="p-3 bg-neutral-800/50 border border-neutral-700 rounded-lg text-white placeholder:text-neutral-500 focus:outline-none focus:ring-2 focus:ring-violet-500 transition-shadow"
         />
         <input
           type="email"
@@ -54,24 +55,27 @@ export function ContactForm() {
           value={email}
           onChange={(e) => setEmail(e.target.value)}
           required
-          className="p-3 bg-gray-700 rounded-md text-white"
+          className="p-3 bg-neutral-800/50 border border-neutral-700 rounded-lg text-white placeholder:text-neutral-500 focus:outline-none focus:ring-2 focus:ring-violet-500 transition-shadow"
         />
         <textarea
           placeholder="Sua Mensagem"
           value={message}
           onChange={(e) => setMessage(e.target.value)}
           required
-          rows={5}
-          className="p-3 bg-gray-700 rounded-md text-white"
+          rows={4}
+          className="p-3 bg-neutral-800/50 border border-neutral-700 rounded-lg text-white placeholder:text-neutral-500 focus:outline-none focus:ring-2 focus:ring-violet-500 transition-shadow"
         />
         <button
           type="submit"
-          className="p-3 bg-cyan-600 hover:bg-cyan-700 rounded-md font-bold transition-colors"
+          className="px-6 py-3 rounded-full bg-white text-black font-semibold hover:bg-gray-200 transition-colors duration-300 cursor-pointer"
         >
           Enviar Mensagem
         </button>
-        {status && <p className="text-center mt-4">{status}</p>}
+        {status && (
+          <p className="text-center text-sm text-neutral-400 mt-2">{status}</p>
+        )}
       </form>
-    </section>
+    </div>
   );
-}
+};
+export default ContactForm;

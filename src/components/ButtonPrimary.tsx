@@ -20,7 +20,8 @@ export function ButtonPrimary({
         px-6 py-2 rounded-full 
         bg-white text-black 
         font-semibold 
-        hover:bg-gray-200 
+        hover:bg-purple-100 
+        cursor-pointer
         focus:outline-none focus:ring-2 focus:ring-gray-400 focus:ring-opacity-75
         transition-colors duration-300
         ${className}

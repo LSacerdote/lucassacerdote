@@ -1,8 +1,7 @@
-// src/components/Navbar.tsx
-
 "use client";
 
 import Link from "next/link";
+import { IoRocketSharp } from "react-icons/io5";
 
 export function Navbar() {
   return (
@@ -11,32 +10,35 @@ export function Navbar() {
         <Link href="/" className="text-2xl font-bold text-white">
           LS
         </Link>
-        <div className="flex items-center gap-6 text-white font-medium">
-          <Link
-            href="/#sobre"
-            className="hover:text-cyan-400 transition-colors"
-          >
+        <div className="flex items-center gap-6 text-neutral-300 font-medium">
+          <Link href="/#sobre" className="hover:text-white transition-colors">
             Sobre
           </Link>
           <Link
             href="/#projetos"
-            className="hover:text-cyan-400 transition-colors"
+            className="hover:text-white transition-colors"
           >
             Projetos
           </Link>
-          <Link
-            href="/#contato"
-            className="hover:text-cyan-400 transition-colors"
-          >
+          <Link href="/#contato" className="hover:text-white transition-colors">
             Contato
           </Link>
           <a
-            href="https://github.com/seu-usuario-aqui"
+            href="https://github.com/LSacerdote"
             target="_blank"
             rel="noopener noreferrer"
-            className="hover:text-cyan-400 transition-colors"
+            className="hover:text-white transition-colors"
           >
             GitHub
+          </a>
+
+          <a
+            href="https://www.linkedin.com/in/lucas-sacerdote-3a6b8a240/"
+            target="_blank"
+            rel="noopener noreferrer"
+            className="hover:text-white transition-colors"
+          >
+            LinkedIn
           </a>
         </div>
       </div>

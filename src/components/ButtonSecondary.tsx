@@ -25,6 +25,7 @@ export function ButtonSecondary({
         focus:outline-none focus:ring-2 focus:ring-white/60 focus:ring-opacity-75
         transition-colors duration-300
         backdrop-blur-sm
+        cursor-pointer
         ${className}
       `}
     >
