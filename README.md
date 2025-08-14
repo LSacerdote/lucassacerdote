@@ -1,5 +1,9 @@
 # ⚛️ Portfólio Pessoal - Lucas Sacerdote
 
+[![Deploy with Vercel](https://vercel.com/button)](https://lucassacerdote.vercel.app/)
+
+**Acesse a versão ao vivo aqui: [lucassacerdote.vercel.app](https://lucassacerdote.vercel.app/)**
+
 Este é o repositório do meu portfólio pessoal, desenvolvido para ser uma vitrine moderna e interativa dos meus projetos, habilidades e experiência como Desenvolvedor Full Stack.
 
 ---
@@ -101,7 +105,7 @@ Este projeto foi desenvolvido por:
 **Lucas Sacerdote**
 
 * **GitHub:** [@LSacerdote](https://github.com/LSacerdote)
-* **LinkedIn:** [https://www.linkedin.com/in/lucas-sacerdote-3a6b8a240/)
+* **LinkedIn:** [@Lucas Sacerdote](https://www.linkedin.com/in/lucas-sacerdote-3a6b8a240/)
 
 ---
 
