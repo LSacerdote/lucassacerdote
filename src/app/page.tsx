@@ -67,7 +67,7 @@ export default function Home() {
           </Link>
         </div>
       </section>
-
+      <TechCarousel />
       <section id="sobre" className="w-full py-24 lg:py-32 pt-20">
         <div className="max-w-3xl mx-auto px-4">
           <TrueFocus
