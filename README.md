@@ -14,7 +14,7 @@ O principal objetivo deste projeto foi tratar o meu portfólio como um produto d
 
 * **Desenvolver** uma aplicação full stack moderna com Next.js, TypeScript e Tailwind CSS.
 * **Criar** uma interface de usuário (UI) visualmente apelativa e rica em animações, utilizando bibliotecas como Framer Motion e React Icons.
-* **Implementar** funcionalidades dinâmicas, como um formulário de contato funcional.
+* **Implementar** funcionalidades dinâmicas, como um formulário de contato funcional com envio de e-mails.
 * **Construir** um site totalmente responsivo, garantindo uma experiência de usuário consistente em desktops, tablets e dispositivos móveis.
 
 ---
@@ -30,7 +30,7 @@ O principal objetivo deste projeto foi tratar o meu portfólio como um produto d
 * **Galeria de Projetos:** Cards com efeito "spotlight" que reage ao movimento do mouse para exibir meus trabalhos.
 
 ✅ **Funcionalidades Full Stack:**
-* **Formulário de Contato:** Integrado no rodapé, com um endpoint de API funcional (`/api/contact`) construído com as API Routes do Next.js.
+* **Formulário de Contato:** Integrado no rodapé, com um endpoint de API (`/api/contact`) que utiliza o **Resend** para enviar os dados do formulário diretamente para o meu e-mail.
 
 ✅ **Integrações de API:**
 * **Widget do Spotify:** Exibição de uma playlist diretamente no rodapé da página.
@@ -54,17 +54,18 @@ O projeto utiliza a arquitetura **App Router** do Next.js, que favorece o uso de
 
 ### 🔧 Tecnologias Utilizadas
 
-| Tecnologia      | Propósito                                             |
-| --------------- | ----------------------------------------------------- |
-| **Next.js** | Framework React para front-end e back-end.            |
-| **React** | Biblioteca principal para a construção da UI.         |
-| **TypeScript** | Superset do JavaScript para tipagem estática.         |
-| **Tailwind CSS**| Framework de estilização "utility-first".             |
-| **Framer Motion**| Biblioteca para animações complexas em React.         |
-| **React Icons** | Biblioteca para a inclusão de ícones de alta qualidade.|
-| **OGL** | Biblioteca WebGL para o fundo animado "Dark Veil".    |
-| **Node.js** | Ambiente de execução para as API Routes do Next.js.   |
-| **Vercel** | Plataforma de hospedagem otimizada para Next.js.      |
+| Tecnologia      | Propósito                                                  |
+| --------------- | ---------------------------------------------------------- |
+| **Next.js** | Framework React para front-end e back-end.                 |
+| **React** | Biblioteca principal para a construção da UI.              |
+| **TypeScript** | Superset do JavaScript para tipagem estática.              |
+| **Tailwind CSS**| Framework de estilização "utility-first".                  |
+| **Framer Motion**| Biblioteca para animações complexas em React.              |
+| **React Icons** | Biblioteca para a inclusão de ícones de alta qualidade.    |
+| **OGL** | Biblioteca WebGL para o fundo animado "Dark Veil".         |
+| **Resend** | Plataforma para envio de e-mails transacionais via API.    |
+| **Node.js** | Ambiente de execução para as API Routes do Next.js.        |
+| **Vercel** | Plataforma de hospedagem otimizada para Next.js.           |
 
 ---
 
@@ -74,6 +75,7 @@ O projeto utiliza a arquitetura **App Router** do Next.js, que favorece o uso de
 
 * **Node.js** - Versão 18 ou superior.
 * **npm** ou **yarn**.
+* Uma **Chave de API do Resend**.
 
 **Instalação e Execução**
 
@@ -89,12 +91,18 @@ O projeto utiliza a arquitetura **App Router** do Next.js, que favorece o uso de
     ```bash
     npm install
     ```
-4.  **Execute o servidor de desenvolvimento:**
+4.  **Configure as Variáveis de Ambiente:**
+    * Crie um arquivo chamado `.env.local` na raiz do projeto.
+    * Dentro deste arquivo, adicione a sua chave de API do Resend:
+        ```
+        RESEND_API_KEY=sua_chave_aqui
+        ```
+5.  **Execute o servidor de desenvolvimento:**
     ```bash
     npm run dev
     ```
-5.  **Acesse a Aplicação:**
-    O sistema estará disponível no seu navegador no endereço: `http://localhost:3001`
+6.  **Acesse a Aplicação:**
+    O sistema estará disponível no seu navegador no endereço: `http://localhost:3000`
 
 ---
 
@@ -105,7 +113,7 @@ Este projeto foi desenvolvido por:
 **Lucas Sacerdote**
 
 * **GitHub:** [@LSacerdote](https://github.com/LSacerdote)
-* **LinkedIn:** [@Lucas Sacerdote](https://www.linkedin.com/in/lucas-sacerdote-3a6b8a240/)
+* **LinkedIn:** [https://www.linkedin.com/in/lucas-sacerdote-3a6b8a240/](https://www.linkedin.com/in/lucas-sacerdote-3a6b8a240/)
 
 ---
 
